@@ -1,0 +1,5 @@
+MongoDB Information:
+Username : nasa-api
+Password : r2RU9psQgFZvTHcY
+
+connect string : "mongodb+srv://nasa-api:<password>@nasa-api.srkviyv.mongodb.net/?retryWrites=true&w=majority"
