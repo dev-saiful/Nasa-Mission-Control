@@ -46,9 +46,11 @@ function loadPlanetsData()
 
 // parse();
 
-function getAllPlanets()
+async function getAllPlanets()
 {
-    return habitablePlanets;
+    return await planets.find({
+        keplerName
+    });
 }
 
 
