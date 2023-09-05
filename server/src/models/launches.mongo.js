@@ -32,3 +32,6 @@ const lanuchesSchema = new mongoose.Schema({
         default : true,
     },
 });
+
+//  creating model
+module.exports = mongoose.model("Launch",lanuchesSchema);
