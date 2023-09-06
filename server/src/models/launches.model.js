@@ -67,18 +67,17 @@ async function saveLaunch(launch)
 }
 
 
-function addNewLaunch(launch)
+async function scheduleNewLaunch(launch)
 {
-    latestFlightNumber++;
-    launches.set(
-        latestFlightNumber,
-        Object.assign(launch,{
-            success : true,
-            upcoming : true,
-            customers : ["Zero to Mastery", "NASA"],
-            flightNumber: latestFlightNumber,
-    })
-    );
+    const newFligthNumber = await getLatestFlightNumber() + 1;
+    const newLaunch = Object.assign(launch,{
+        success : true,
+        upcoming : true,
+        customers : ["RaddSoft Technology", "NASA"],
+        flightNumber: newFligthNumber,
+    });
+
+    await saveLaunch(newLaunch);
 }
 
 function abortLaunchById(launchId)
@@ -92,7 +91,7 @@ function abortLaunchById(launchId)
 
 module.exports = {
     getAllLaunches,
-    addNewLaunch,
+    scheduleNewLaunch,
     existsLaunchWithId,
     abortLaunchById,
 };
