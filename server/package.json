@@ -10,13 +10,14 @@
     "watch": "nodemon src/server.js",
     "cluster": "pm2 start src/server.js -i max"
   },
-  "jest":{
+  "jest": {
     "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.2",
     "cors": "^2.8.5",
     "csv-parse": "^5.3.6",
     "dotenv": "^16.0.3",
